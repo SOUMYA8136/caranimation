@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero
+        {
+            height: 100vh;
+            width: 100%;
+            background-image: url(sky.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .highway
+        {
+            height: 200px;
+            width: 500%;
+            display: block;
+            background-image: url(road.jpg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            animation: highway 5s linear infinite;
+        }
+
+        @keyframes highway
+        {
+            100%
+            {
+                transform: translateX(-3400px);
+            }
+        }
+
+        .city
+        {
+            height: 250px;
+            width: 500%;
+            background-image: url(city.png);
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: city 20s linear infinite;
+        }
+
+        @keyframes city
+        {
+            100%
+            {
+                transform: translateX(-1400px);
+            }
+        }
+
+        .car
+        {
+            width: 400px;
+            left: 50%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .car img
+        {
+            width: 100%;
+            animation: car 1s linear infinite;
+        }
+
+        @keyframes car
+        {
+            100%
+            {
+                transform: translateY(-1px);
+            }
+            50%
+            {
+                transform: translateY(1px);
+            }
+            0%
+            {
+                transform: translateY(-1px);
+            }
+        }
+
+        .wheel
+        {
+            left: 50%;
+            bottom: 178px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel img
+        {
+            width: 72px;
+            height: 72px;
+            animation: wheel 1s linear infinite;
+        }
+
+        .back-wheel
+        {
+            left: -165px;
+            position: absolute;
+        }
+
+        .front-wheel
+        {
+            left: 80px;
+            position: absolute;
+        }
+
+        @keyframes wheel
+        {
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+
+        .skills-container
+        {
+            background: rgba(221, 211, 211, 0.733);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .skills-container h2
+        {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .skills-container ul
+        {
+            list-style: none;
+        }
+
+        .skills-container li
+        {
+            font-size: 16px;
+            color: #cc126f; /* Orange color */
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="highway"></div>
+        <div class="city"></div>
+
+        <div class="car">
+            <img src="car.png">
+        </div>
+        <div class="wheel">
+            <img src="wheel.png" class="back-wheel">
+            <img src="wheel.png" class="front-wheel">
+        </div>
+
+        <div class="skills-container">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Programming (c/c++) & DSA</li>
+                <li>Sound knowledge in HYBRID ELECTRIC VEHICLE(HEVs)</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Leadership</li>
+                <li>Problem Solving & Critical Thinking</li>
+                <li>Teamwork and Collaboration</li>
+                <li>Networking & Adaptability</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
